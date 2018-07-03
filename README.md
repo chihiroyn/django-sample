@@ -21,6 +21,6 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 * プロジェクトにアプリケーションを追加  
 `$ vi settings.py`  
   
-`INSTALLED_APPS = [`
+`INSTALLED_APPS = [`  
 `    'polls.apps.PollsConfig',`  
 `..`  
