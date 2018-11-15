@@ -40,3 +40,12 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 
 * 管理ユーザーの作成
 `$ python manage.py createsuperuser`
+
+* urlsモジュールとビューとを結びつける
+`$ cd mysite/polls`
+`$ vi urls.py`
+`from . import views`
+`urlpatterns = [`
+`    # ex: /polls/5/`
+`    path('<int:question_id>', views.detail, name='detail'),`
+`]`
