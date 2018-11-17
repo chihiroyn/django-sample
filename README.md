@@ -44,8 +44,22 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 * urlsモジュールとビューとを結びつける
 `$ cd mysite/polls`
 `$ vi urls.py`
+
 `from . import views`
 `urlpatterns = [`
 `    # ex: /polls/5/`
 `    path('<int:question_id>', views.detail, name='detail'),`
 `]`
+
+* テンプレートをロードし、コンテキストに値を入れ、テンプレートをレンダリングした結果をHttpResponseオブジェクトで返す
+`$ cd mysite/polls`
+`$ vi views.py`
+
+`from django.shortcuts import render`
+` `
+`from .models import Question`
+` `
+`def index(request):`
+`    latest_question_list = Question.objects.order_by('-pub_date')[:5]`
+`    context = {'latest_question_list': latest_question_list}`
+`    return render(request, 'polls/index.html', context)`
