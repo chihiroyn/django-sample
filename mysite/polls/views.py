@@ -16,34 +16,10 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         """Return the last five published questions."""
         return Question.objects.order_by('-pub_date')[:5]
-'''
-def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index.html', context)
-'''
-'''
-    template = loader.get_template('polls/index.html')
-    context = {
-        'latest_question_list': latest_question_list,
-    }
-    return HttpResponse(template.render(context, request))
-'''
 
-# Leave the rest of the views (detail, results, vote) unchanged
-
-from django.shortcuts import render
-
-def detail(request, question_id):
-    '''
-    try:
-        question = Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")
-    '''
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
-#    return HttpResponse("You're looking at question %s." % question_id)
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
