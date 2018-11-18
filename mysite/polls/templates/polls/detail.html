@@ -2,9 +2,6 @@
 
 {% if error_message %}<p><strong>{{ error_message }}<strong></p>{% endif %}
 
-<ul>
-    <li>{{ choice.choice_text }}</li>
-</ul>
 <form action="{% url 'polls:vote' question.id %}" method="post">
 {% csrf_token %}
 {% for choice in question.choice_set.all %}
