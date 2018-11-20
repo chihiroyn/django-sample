@@ -63,3 +63,9 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 `    latest_question_list = Question.objects.order_by('-pub_date')[:5]`
 `    context = {'latest_question_list': latest_question_list}`
 `    return render(request, 'polls/index.html', context)`
+
+`$ cd mysite/polls/template/polls`
+`$ vi index.html`
+
+`{% if latest_question_list %}`
+...
