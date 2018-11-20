@@ -68,4 +68,4 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 `$ vi index.html`  
   
 `{% if latest_question_list %}`  
-...  
+`...`  
