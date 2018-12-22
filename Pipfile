@@ -8,5 +8,6 @@ python_version = "3.5"
 
 [packages]
 django = ">=2.0.8"
+pip = "==18.0"
 
 [dev-packages]
