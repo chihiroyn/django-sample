@@ -69,3 +69,7 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
   
 `{% if latest_question_list %}`  
 `...`  
+  
+* テストを実行する  
+`$ python manage.py test polls`  
+  
