@@ -8,6 +8,6 @@ python_version = "3.5"
 
 [packages]
 pip = "==18.0"
-django = ">=2.1.5"
+django = ">=2.1.6"
 
 [dev-packages]
