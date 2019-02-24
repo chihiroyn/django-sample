@@ -77,18 +77,12 @@ urlpatterns = [
 ]
 ```
 
+モデルの作成
+------------
+https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 
-* モデルの作成  
-https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models  
-  
-* プロジェクトにアプリケーションを追加  
-`$ vi settings.py`  
-  
-`INSTALLED_APPS = [`  
-`        'polls.apps.PollsConfig',`  
-`...`  
-  
-* モデルからマイグレーションを作成  
+モデルからマイグレーションを作成
+--------------------------------
 `$ python manage.py makemigrations polls`  
   
 * マイグレーションの適用  
