@@ -115,8 +115,8 @@ urlpatterns = [
 
 テンプレートをロードし、コンテキストに値を入れ、テンプレートをレンダリングした結果をHttpResponseオブジェクトで返す
 ------------------------------------------------------------------------------------------------------------------
-$ cd mysite/polls
-$ vi views.py
+    $ cd mysite/polls
+    $ vi views.py
 
 ```python:mysite/polls/views.py
 from django.shortcuts import render
@@ -129,8 +129,8 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-$ cd mysite/polls/template/polls
-$ vi index.html
+    $ cd mysite/polls/template/polls
+    $ vi index.html
 
 ```python:mysite/polls/template/polls/index.html
 {% if latest_question_list %}
