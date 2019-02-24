@@ -21,6 +21,16 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 ----------------------
     $ python manage.py startapp polls
 
+ビューの作成（固定文をresponseとして返す）
+----------------------------------------
+
+```polls/views.py
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+```
+
 * モデルの作成  
 https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models  
   
