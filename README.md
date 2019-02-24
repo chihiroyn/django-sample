@@ -1,9 +1,11 @@
-* 参考  
+参考
+----
 https://docs.djangoproject.com/ja/2.0/intro/tutorial01/  
-  
-* プロジェクトの作成  
-`$ django-admin startproject mysite`  
-  
+
+プロジェクトの作成
+-----------------
+    $ django-admin startproject mysite
+
 * サーバの起動  
 `$ cd mysite`  
 `$ python manage.py runserver`  
