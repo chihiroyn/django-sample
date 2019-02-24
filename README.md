@@ -11,14 +11,16 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
     $ cd mysite
     $ python manage.py runserver
   
-* アプリケーションの作成  
-`$ python manage.py startapp polls`  
-  
-* タイムゾーンの設定  
-`$ cd mysite`  
-`$ vi settings.py`  
-`TIME_ZONE = 'Asia/Tokyo'`  
-  
+タイムゾーンの設定
+------------------
+    $ cd mysite
+    $ vi settings.py
+    TIME_ZONE = 'Asia/Tokyo'
+
+アプリケーションの作成
+----------------------
+    $ python manage.py startapp polls
+
 * モデルの作成  
 https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models  
   
