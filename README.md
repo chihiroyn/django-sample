@@ -93,8 +93,11 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 -------------------------------------
     $ cd mysite/polls
     $ vi admin.py
+
+```python:mysite/polls/admin.py
     from .models import Question
     admin.site.register(Question)
+```
 
 管理ユーザーの作成
 ------------------
