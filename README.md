@@ -6,9 +6,10 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 -----------------
     $ django-admin startproject mysite
 
-* サーバの起動  
-`$ cd mysite`  
-`$ python manage.py runserver`  
+サーバの起動
+------------
+    $ cd mysite
+    $ python manage.py runserver
   
 * アプリケーションの作成  
 `$ python manage.py startapp polls`  
@@ -75,7 +76,7 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 * テストを実行する  
 `$ python manage.py test polls`  
   
-* テンプレートファイルの置き場所（デフォルト）  
+* 静的ファイルの置き場所（デフォルト）  
 `mysite/polls/static/polls/`  
   
 * テンプレートから静的ファイルのCSSを読み込む  
