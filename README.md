@@ -73,3 +73,10 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 * テストを実行する  
 `$ python manage.py test polls`  
   
+* テンプレートファイルの置き場所（デフォルト）  
+`mysite/polls/static/polls/`  
+  
+* テンプレートから静的ファイルのCSSを読み込む  
+`{% load static %}`  
+  
+`<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">`  
