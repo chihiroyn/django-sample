@@ -21,6 +21,17 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 ----------------------
     $ python manage.py startapp polls
 
+    $ cd mysite/mysite
+    $ vi settings.py
+
+```python:mysite/settings.py
+...
+INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+...
+```
+
 ビューの作成（固定文をresponseとして返す）
 ----------------------------------------
 
