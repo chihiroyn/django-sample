@@ -34,6 +34,39 @@ def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 ```
 
+アプリケーションのURLconf設定
+------------------------------
+
+    $ cd mysite/polls
+    $ vi urls.py
+
+```python:polls/urls.py
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
+
+ルートのURLconfにアプリケーションのURLconfをインクルードさせる
+--------------------------------------------------------------
+
+    $ cd mysite
+    $ vi urls.py
+
+```python:mysite/urls.py
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+```
+
+
 * モデルの作成  
 https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models  
   
