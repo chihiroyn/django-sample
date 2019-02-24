@@ -24,7 +24,10 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 ビューの作成（固定文をresponseとして返す）
 ----------------------------------------
 
-```polls/views.py
+    $ cd mysite/polls
+    $ vi views.py
+
+```python:polls/views.py
 from django.http import HttpResponse
 
 def index(request):
