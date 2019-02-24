@@ -113,25 +113,30 @@ urlpatterns = [
 ]
 ```
 
-* テンプレートをロードし、コンテキストに値を入れ、テンプレートをレンダリングした結果をHttpResponseオブジェクトで返す  
-`$ cd mysite/polls`  
-`$ vi views.py`  
-  
-`from django.shortcuts import render`  
-` `  
-`from .models import Question`  
-` `  
-`def index(request):`  
-`    latest_question_list = Question.objects.order_by('-pub_date')[:5]`  
-`    context = {'latest_question_list': latest_question_list}`  
-`    return render(request, 'polls/index.html', context)`  
-  
-`$ cd mysite/polls/template/polls`  
-`$ vi index.html`  
-  
-`{% if latest_question_list %}`  
-`...`  
-  
+テンプレートをロードし、コンテキストに値を入れ、テンプレートをレンダリングした結果をHttpResponseオブジェクトで返す
+------------------------------------------------------------------------------------------------------------------
+$ cd mysite/polls
+$ vi views.py
+
+```python:mysite/polls/views.py
+from django.shortcuts import render
+
+from .models import Question
+
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'polls/index.html', context)
+```
+
+$ cd mysite/polls/template/polls
+$ vi index.html
+
+```python:mysite/polls/template/polls/index.html
+{% if latest_question_list %}
+...
+```
+
 テストを実行する
 ----------------
     $ python manage.py test polls
