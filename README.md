@@ -99,17 +99,20 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial02/#creating-models
 管理ユーザーの作成
 ------------------
     $ python manage.py createsuperuser
-  
-* urlsモジュールとビューとを結びつける  
-`$ cd mysite/polls`  
-`$ vi urls.py`  
-  
-`from . import views`  
-`urlpatterns = [`  
-`    # ex: /polls/5/`  
-`    path('<int:question_id>', views.detail, name='detail'),`  
-`]`  
-  
+
+urlsモジュールとビューとを結びつける
+------------------------------------
+    $ cd mysite/polls
+    $ vi urls.py
+
+```python:mysite/polls/urls.py
+from . import views
+urlpatterns = [
+    # ex: /polls/5/
+    path('<int:question_id>', views.detail, name='detail'),
+]
+```
+
 * テンプレートをロードし、コンテキストに値を入れ、テンプレートをレンダリングした結果をHttpResponseオブジェクトで返す  
 `$ cd mysite/polls`  
 `$ vi views.py`  
