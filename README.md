@@ -180,6 +180,26 @@ urlpatterns = [
 ]
 ```
 
+同じくPOSTメソッドの場合
+-----------------------
+    $ cd mysite/polls/templates/polls
+    $ vi index.html
+
+```python:mysite/polls/template/polls/index.html
+...
+    <form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+...
+```
+    $ cd mysite/polls
+    $ vi views.py
+
+```python:mysite/polls/views.py
+...
+    keyword = request.POST['keyword']
+...
+```
+
 テストを実行する
 ----------------
     $ python manage.py test polls
