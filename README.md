@@ -170,6 +170,16 @@ def search(request):
     return HttpResponse(keyword)
 ```
 
+    $ cd mysite/polls
+    $ vi urls.py
+
+```python:mysite/polls/urls.py
+urlpatterns = [
+...
+    path('search', views.search, name='search'),
+]
+```
+
 テストを実行する
 ----------------
     $ python manage.py test polls
