@@ -132,7 +132,7 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-    $ cd mysite/polls/template/polls
+    $ cd mysite/polls/templates/polls
     $ vi index.html
 
 ```python:mysite/polls/template/polls/index.html
