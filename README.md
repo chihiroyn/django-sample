@@ -140,6 +140,36 @@ def index(request):
 ...
 ```
 
+ごく簡単なフォームのページを作成し、フォームに入力した値をGETメソッドで後続処理に渡す
+-------------------------------------------------------------------------------------
+    $ cd mysite/polls/templates/polls
+    $ vi index.html
+
+```python:mysite/polls/template/polls/index.html
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>検索ページ</title>
+  </head>
+
+  <body>
+    <form action="{% url 'search' %}" method="get">
+      <input type="text" value="" name="keyword">
+      <input type="submit" value="検索する！">
+    </form>
+  </body>
+</html>
+```
+    $ cd mysite/polls
+    $ vi views.py
+
+```python:mysite/polls/views.py
+def search(request):
+    keyword = request.GET['keyword']
+    return HttpResponse(keyword)
+```
+
 テストを実行する
 ----------------
     $ python manage.py test polls
