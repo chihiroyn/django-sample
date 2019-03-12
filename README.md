@@ -137,7 +137,14 @@ def index(request):
 
 ```python:mysite/polls/template/polls/index.html
 {% if latest_question_list %}
-...
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
 ```
 
 ごく簡単なフォームのページを作成し、フォームに入力した値をGETメソッドで後続処理に渡す
