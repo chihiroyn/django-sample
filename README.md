@@ -11,10 +11,12 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
     $ cd mysite
     $ python manage.py runserver
   
-タイムゾーンの設定
-------------------
+言語とタイムゾーンの設定
+------------------------
     $ cd mysite
     $ vi settings.py
+    LANGUAGE_CODE = 'ja'
+    
     TIME_ZONE = 'Asia/Tokyo'
 
 アプリケーションの作成
