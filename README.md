@@ -245,3 +245,10 @@ urlpatterns = [
     
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
     ...
+
+HTTPSリダイレクトするようにする
+-------------------------------
+
+```python:mysite/settings.py
+SECURE_SSL_REDIRECT = True
+```
