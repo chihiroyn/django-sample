@@ -101,8 +101,8 @@ from .models import Question
 admin.site.register(Question)
 ```
 
-Python対話シェルからモデルでデータを操作する
---------------------------------------------
+モデルでデータを操作する
+------------------------
     $ python manage.py migrate
     
     >>> from polls.models import Choice, Question
@@ -115,7 +115,10 @@ Python対話シェルからモデルでデータを操作する
     >>> q.save()
     >>> Question.objects.all()
     <QuerySet [<Question: Question object (1)>]>
-    
+
+    >>> q.choice_set.create(choice_text='Not much', votes=0)
+    <Choice: Not much>
+
     >>> q.question_text = "What's up?"
     >>> q.save()
 
