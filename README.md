@@ -252,3 +252,12 @@ HTTPSリダイレクトするようにする
 ```python:mysite/settings.py
 SECURE_SSL_REDIRECT = True
 ```
+
+開発環境と本番環境とで環境設定を分ける
+--------------------------------------
+
+* settings.py を３つのファイルに分ける
+* manage.py を修正する（開発環境向け）
+* wsgi.py を修正する（本番環境向け）
+
+https://leben.mobi/blog/python_django_settings/python/?unapproved=1557&moderation-hash=b5898a59dbc8eb9fa7db7eb59e8bd16e#comment-1557
