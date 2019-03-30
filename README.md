@@ -101,6 +101,24 @@ from .models import Question
 admin.site.register(Question)
 ```
 
+Python対話シェルからモデルでデータを操作する
+--------------------------------------------
+    $ python manage.py migrate
+    
+    >>> from polls.models import Choice, Question
+
+    >>> Question.objects.all()
+    <QuerySet []>
+
+    >>> from django.utils import timezone
+    >>> q = Question(question_text="What's new?", pub_date=timezone.now())
+    >>> q.save()
+    >>> Question.objects.all()
+    <QuerySet [<Question: Question object (1)>]>
+    
+    >>> q.question_text = "What's up?"
+    >>> q.save()
+
 管理ユーザーの作成
 ------------------
     $ python manage.py createsuperuser
