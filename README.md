@@ -263,3 +263,14 @@ SECURE_SSL_REDIRECT = True
 https://leben.mobi/blog/python_django_settings/python/?unapproved=1557&moderation-hash=b5898a59dbc8eb9fa7db7eb59e8bd16e#comment-1557
 
 * 他、settings.py を読み込んでいる処理を修正する（django.setup()を呼んでいる処理）← 忘れないように注意！
+
+プロジェクトに設定済であるタイムゾーンの現在時刻を取得する
+----------------------------------------------------------
+
+```
+    from django.utils import timezone
+...
+    now = timezone.localtime()
+```
+
+pip install pytz しておく必要があるらしい。
