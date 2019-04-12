@@ -246,6 +246,12 @@ urlpatterns = [
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
     ...
 
+HerokuにデプロイするのでDBMSにPostgresを使う
+--------------------------------------------
+Heroku上でSQLiteは一見使えるように見えるが、インスタンスが再起動したときにファイルが消えてしまうので、結局使えない。  
+ので、Postgresを使うようにする必要がある。  
+DB接続文字列を、環境変数DATABASE_URLから取得させるようにすることができるdj-database-urlを使うのが良い。
+
 HTTPSリダイレクトするようにする
 -------------------------------
 
