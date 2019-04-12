@@ -252,6 +252,23 @@ Heroku上でSQLiteは一見使えるように見えるが、インスタンス�
 ので、Postgresを使うようにする必要がある。  
 DB接続文字列を、環境変数DATABASE_URLから取得させるようにすることができるdj-database-urlを使うのが良い。
 
+    $ pipenv install dj_database_url
+
+または、django-toolbeltを入れれば、dj_database_urlも一緒に入る。  
+  
+そして、settings.pyに以下のように書く。
+
+```python:mysite/settings.py
+DATABASES = {
+...
+}
+
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+```
+
 HTTPSリダイレクトするようにする
 -------------------------------
 
