@@ -270,7 +270,9 @@ DATABASES['default'].update(db_from_env)
 ```
 
 参考：  
+* HerokuにDjangoアプリをデプロイするときのまとめ  
 https://qiita.com/ryosan-470/items/0034c85130928851ce72  
+* dj-database-urlに渡すデフォルトの接続文字列  
 http://y0m0r.hateblo.jp/entry/20121130/1354290868  
 
 HTTPSリダイレクトするようにする
