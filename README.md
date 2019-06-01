@@ -257,7 +257,8 @@ urlpatterns = [
 Bootstrapの導入
 ---------------
 https://getbootstrap.com/  
-「Get started」→「Starter template」のHTMLを上記のテンプレートに貼り付けるだけ。
+「Get started」→「Starter template」のHTMLを上記のテンプレートに貼り付けるだけ。  
+ただし、html要素のlang属性だけ、jaに変えておくこと。  
 
 テストを実行する
 ----------------
