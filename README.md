@@ -254,6 +254,11 @@ urlpatterns = [
 ...
 ```
 
+Bootstrapの導入
+---------------
+https://getbootstrap.com/  
+「Get started」→「Starter template」のHTMLを上記のテンプレートに貼り付けるだけ。
+
 テストを実行する
 ----------------
     $ python manage.py test polls
