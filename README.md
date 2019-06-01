@@ -6,6 +6,10 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 -----------------
     $ django-admin startproject mysite
 
+#### カレントディレクトリ直下に、設定ファイルをconfigディレクトリに収めてプロジェクトを作成
+
+    $ django-admin startproject config .
+
 サーバの起動
 ------------
     $ cd mysite
