@@ -67,6 +67,12 @@ urlpatterns = [
 ]
 ```
 
+* path()関数の引数
+    * route …… URLパターンの文字列。
+    * view …… リクエストを引き渡すview関数。
+    * name …… URLの名称の定義。定義すると、Djangoのあらゆる場所から参照可能になる。
+    * kwargs（任意）…… 追加の引数。辞書。
+
 #### app_nameにアプリ名を指定し、プロジェクトを通してグローバルにこのアプリのURLを特定できるようにする
 
 ```python:kanban/urls.py
