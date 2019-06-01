@@ -67,6 +67,20 @@ urlpatterns = [
 ]
 ```
 
+#### app_nameにアプリ名を指定し、プロジェクトを通してグローバルにこのアプリのURLを特定できるようにする
+
+```python:kanban/urls.py
+from django.urls import path
+
+from . import views
+
+app_name = "kanban"
+
+urlpatterns = [
+    path("", views.index, name="index"),
+]
+```
+
 ルートのURLconfにアプリケーションのURLconfをインクルードさせる
 --------------------------------------------------------------
 
