@@ -14,7 +14,7 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 ------------
     $ cd mysite
     $ python manage.py runserver
-  
+
 言語とタイムゾーンの設定
 ------------------------
     $ cd mysite
@@ -26,7 +26,7 @@ https://docs.djangoproject.com/ja/2.0/intro/tutorial01/
 アプリケーションの作成
 ----------------------
     $ python manage.py startapp polls
-
+    
     $ cd mysite/mysite
     $ vi settings.py
 
@@ -130,19 +130,19 @@ admin.site.register(Question)
     $ python manage.py migrate
     
     >>> from polls.models import Choice, Question
-
+    
     >>> Question.objects.all()
     <QuerySet []>
-
+    
     >>> from django.utils import timezone
     >>> q = Question(question_text="What's new?", pub_date=timezone.now())
     >>> q.save()
     >>> Question.objects.all()
     <QuerySet [<Question: Question object (1)>]>
-
+    
     >>> q.choice_set.create(choice_text='Not much', votes=0)
     <Choice: Not much>
-
+    
     >>> q.question_text = "What's up?"
     >>> q.save()
 
@@ -192,6 +192,16 @@ def index(request):
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+```
+
+ビューで、HTTPメソッドがPOSTか否かの分岐を入れる
+------------------------------------------------
+```
+...
+    if request.method == 'POST':
+...
+    else:
+...
 ```
 
 ごく簡単なフォームのページを作成し、フォームに入力した値をGETメソッドで後続処理に渡す
@@ -285,7 +295,7 @@ DB接続文字列を、環境変数DATABASE_URLから取得させるようにす
     $ pipenv install dj_database_url
 
 または、django-toolbeltを入れれば、dj_database_urlも一緒に入る。  
-  
+
 そして、settings.pyに以下のように書く。
 
 ```python:mysite/settings.py
