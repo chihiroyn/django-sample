@@ -4,10 +4,12 @@ verify_ssl = true
 url = "https://pypi.org/simple"
 
 [requires]
-python_version = "3.5"
+python_version = "3.7"
 
 [packages]
 pip = "==18.0"
 django = ">=2.2.4"
+djangorestframework = "*"
+django-filter = "*"
 
 [dev-packages]

@@ -343,3 +343,20 @@ https://leben.mobi/blog/python_django_settings/python/?unapproved=1557&moderatio
 ```
 
 pip install pytz しておく必要があるらしい。
+
+# Django REST Frameworkを使ってAPIを実装する
+## 参考
+Django REST Frameworkを使って爆速でAPIを実装する
+https://qiita.com/kimihiro_n/items/86e0a9e619720e57ecd8
+
+## プロジェクトにDjango REST Frameworkを組み込む
+
+```python:django_rest_framework_test/settings.py
+...
+INSTALLED_APPS = (
+    ...
+    'blog',
+    'rest_framework',
+)
+...
+```
